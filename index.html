@@ -10,7 +10,50 @@
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=1.3.2'></script>
   <script type='text/javascript' src='js/jquery.color-RGBa-patch.js'></script>
   <script type='text/javascript' src='js/example.js'></script>
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <script type="text/javascript">
+	  //<![CDATA[
+	   	
+	    function toggle(select) {
+	    var home = document.getElementById("home");
+	    var aboutMe = document.getElementById("aboutMe");
+		var techView = document.getElementById("techView");
+		var myPassion = document.getElementById("myPassion");
+		var moments = document.getElementById("moments");
+		var reachMe = document.getElementById("reachMe");
+		
+		home.style.display = "none";
+		aboutMe.style.display = "none";
+		techView.style.display = "none";
+		myPassion.style.display = "none";
+		moments.style.display = "none";
+		reachMe.style.display = "none";
+		 
+		   
+	    if(select == 'aboutMe')
+    	 	{aboutMe.style.display = "block";}	
+			
+	    else if(select=='home')
+		   {home.style.display = "block";}
+		   
+		else if (select=='techView')
+		   {techView.style.display = "block";}
+		
+		
+		else if (select=='myPassion')
+		   {myPassion.style.display = "block";}
+		
+		
+		else if(select=='moments')
+		   {moments.style.display = "block";}
+		
+		else if(select=='reachMe')
+		   {reachMe.style.display = "block";}
+         }  
+	 
+		//]]>
+	  </script>
+  
 </head>
 <body>
 <div id="wrapper"><!-- #wrapper -->
@@ -21,19 +64,20 @@
 
 <div class="nav-wrap">
 		<ul class="group" id="example-one">
-            <li class="current_page_item"><a href="#one">Home</a></li>
-            <li><a href="#two">About Me</a></li>
-            <li><a href="#three">Tech View</a></li>
-            <li><a href="#">My Passion</a></li>
-            <li><a href="#">Moments</a></li>
-			<li><a href="#">Reach Me</a></li>
+            <li class="current_page_item">><a href="javascript:toggle('home');">Home</a></li>
+            <li><a href="javascript:toggle('aboutMe');">About Me</a></li>
+            <li><a href="javascript:toggle('techView');">Tech View</a></li>
+            <li><a href="javascript:toggle('myPassion');">My Passion</a></li>
+            <li><a href="javascript:toggle('moments');">Moments</a></li>
+			<li><a href="javascript:toggle('reachMe');">Reach Me</a></li>
         </ul>
 </div>
 
 <section id="main"><!-- #main content area -->
+  <div id ="home">
 	  <p>&nbsp;</p>
 		<p><br></p>
-	  <div id="slider">    
+	 <div id="slider"> 
      <img class="scrollButtons left" src="images/leftarrow.png">
   	  <div style="overflow: hidden;" class="scroll">
 	
@@ -43,7 +87,7 @@
 						<div class="inside">
 							<img src="images/p1.jpg" alt="picture" />
 							<h2>ThAt'S Me</h2>
-							<p>Click on to know me better.. <a href="#">more link</a></p>
+							<p>Click on to know me better.. <a href="javascript:toggle('aboutMe');">click</a></p>
 						</div>
 					</div>
 
@@ -51,7 +95,7 @@
 						<div class="inside">
 							<img src="images/p2.jpg" alt="picture" />
 							<h2>TeCh Me</h2>
-							<p>PrOud OwNeR Of TeCh BlOgS.. <a href="#">more link</a></p>
+							<p>PrOud OwNeR Of TeCh BlOgS.. <a href="javascript:toggle('techView');">click</a></p>
 						</div>
 					</div>
 				
@@ -59,7 +103,7 @@
 						<div class="inside">
 							<img src="images/p3.jpg" alt="picture" />
 							<h2>MoA:ThE PoEt</h2>
-							<p>Memories That never Fade By.. <a href="#">more link</a></p>
+							<p>Memories That never Fade By.. <a href="javascript:toggle('myPassion');">click</a></p>
 						</div>
 					</div>
 					
@@ -67,7 +111,7 @@
 						<div class="inside">
 							<img src="images/p4.jpg" alt="picture" />
 							<h2>MoMeNtS : UnForGeTtaBle</h2>
-							<p>ImagEs FrOm My LiFe.. <a href="#">more link</a></p>
+							<p>ImagEs FrOm My LiFe.. <a href="javascript:toggle('moments');">click</a></p>
 						</div>
 					</div>
 					
@@ -75,7 +119,7 @@
 						<div class="inside">
 							<img src="images/p5.jpg" alt="picture" />
 							<h2>ReAcH Me</h2>
-							<p>GeT In ToUcH.. <a href="#">more link</a></p>
+							<p>GeT In ToUcH.. <a href="javascript:toggle('reachMe');">click</a></p>
 						</div>
 					</div>
 				
@@ -89,16 +133,73 @@
 			<img class="scrollButtons right" src="images/rightarrow.png">
 
      </div>
+	
         
-<article>
+<article id="homeArticle">
   <p>&nbsp;</p>
   <p>Life is Challenging and Interesting in every sphere. If we sit back and Delve Deep Into Our Inner Mind  , for a moment, many Faces, Places and Incidents flash by... Here I have tried to share with you a Blend of  my experiences.  At Work or Play...there is some thing new we learn in Every Day !! Hope u like the reading experience... Do reach out to me with Your UnBiAsEd View !! </p>
 </article>
+</div>
+<!----#start of about me page--->
+<div class="aboutMe" id="aboutMe">
+<img id="amrutaPic" src="images/p1.jpg"  />
+<b>Welcome To My "Den"</b><br />
+<br />
+I am a Developer and have been coding&nbsp;&nbsp;for a little over 2.5 years now.<br />
+I work for one of the finest firm in providing IT Solutions Globally- "Tata&nbsp;Consultancy&nbsp;Services"<br />
+<br />
+My key technology is Ruby and as can decipher from my Tech Blogs, I have been running my fingers over various aspects of web app development recently . The whole Idea of learning new stuff that spans across the life span of an app i.e. Right from the User Interface to the Database tables and servers, is the call for the day or rather is what is frequently&nbsp;referred&nbsp;to as "The Full Stack Developer".<br />
+<br />
+It feels Great to&nbsp;realize&nbsp;the efficiency and&nbsp;Independence&nbsp;a coder feels, when you can design, code and deploy on your own !!! <br />
+<br />
+On a more lighter note I am person who believes in &nbsp;"Fun At Work", as the ultimate Mantra for Success.<br />
+<img id="logo" src="images/logo.jpg"  />
+<br />
+<br />
+I take part in several CSR (Corporate Social&nbsp;Responsibilities) programs, which ranges from teaching slum kids to&nbsp;organizing&nbsp;trips and camps.<br />
+I am a Guide and have been awarded with "Governor&nbsp;Award"&nbsp;, for my performance &nbsp;as a Guide.<br />
+<br />
+The whole Idea of helping people, arranging camps, long&nbsp;treks&nbsp;fills in a gush of&nbsp;fresh&nbsp;spirit and air in me.<br />
+<br />
+<br />
+<br />
+In my free hour, I &nbsp;love writing on abstract stuff. Dreamer, that I am , I enjoy write about things and moments around me which touched my heart or left behind trail of remembrance. I have written down some of my Dreamy lines for you. Hope it brings a smile in your lips as it does to mine. For me reading my stuff is like a trip &nbsp;"Down The Memory Lane".<br />
+<br />
+<b>Hope you enjoy the reading experience and the pictures, which reflect the&nbsp;colors&nbsp;of my life.</b><br />
+<br />
+<!----End of about Me Tag--->
+</div>
+ 
+ <div id="techView" class="techView">
+ <p>This is the tech view: TECHNICAL BLOGS WILL GET POSTED HERE</p>
+ </div>
+ 
+ <div id="myPassion" class="myPassion">
+ <p>These r my passions: SOME STUFF WILL BE POSTED</p>
+ </div>
+
+ <div id="moments" class="moments">
+    <img id="family" src="images/family.jpg"  />
+</div>
+
+ <div id="reachMe" class="reachMe">
+     <img id="reach1" src="images/reach1.jpg"  />
+	  <img id="reach2" src="images/reach2.jpg"  />
+ <p> <b>Get In Touch !</b></p>
+ <p><img src="images/facebook.jpg"  />Facebook<br /><br/>
+    <img src="images/twitter.jpg"  />Twitter<br /><br/>
+    <b>Office</b> : A wing,Hiranandani<br/>
+	             Mumbai <br/><br/>
+    <b>Residence</b>: House No 101, shahid nagar,Bhubneshwar <br /><br/>
+    <b>Land Line</b>:0671-2626182<br /><br/>
+	<b>Mobile</b>: 9739056922<br /><br/>
+	<b>Email</b>: amrutadas.88@gmail.com<br/<br/><br/><br/></p>
+ </div>
 
 </section>
-<!-- end of #content -->
+<!-- end of #content Home Page -->
 	
-</div>
+
 <!-- #wrapper -->
 </body>
 </html>
