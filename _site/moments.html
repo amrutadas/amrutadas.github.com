@@ -14,7 +14,7 @@
   <script type="text/javascript">
 	
 	jQuery(document).ready(function(){
-	$('.disqus_thread .head').click(function() {
+	$('#accordian').click(function() {
 		$(this).next().toggle();
 		return false;
 	}).next().hide();
@@ -48,13 +48,11 @@
 </div>
 
  <br/>
- <div id="disqus_thread">
+ <div id="accordian">
     <h3><a href="#">Click here to post COMMENTS</a></h3>
-    <div>First content</div>
+    <div id="disqus_thread"></div>
  </div>
- 
-<div id="disqus_thread"></div>
-<script type="text/javascript">
+ <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'amrutadas'; // required: replace example with your forum shortname
 
