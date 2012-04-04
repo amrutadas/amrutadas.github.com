@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<div dir="ltr" style="text-align: left; margin: 5px;" trbidi="on">
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Working on GitHub (a web based hosting service) was an entirely new experience&nbsp;in working on a versioning system. Now that I feel more confident in ruling over the black prompt monster, I gathered loads of "&nbsp;take&nbsp;note of"&nbsp;features that&nbsp;I want to share.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">The homogeneity, dynamic-ness and the multi level backup options that&nbsp;Git provides, are some of the things which grasped my attention and interest.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">After registering and creating a GitHub account I used the SSH key generated to successfully link the two.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Then I moved on to creating a repository following the well instructed simple steps from : http://help.github.com .</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Further on&nbsp;I&nbsp;juggled around trying to&nbsp;</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- push and pull files into and from repository,</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- push and pull repository, </span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- add collaborators</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- merge files and resolve conflicts,</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- fork and upstream&nbsp;repository</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- creating branches and organization.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">A few finer features of Github that I noticed&nbsp;are as follows:</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">1) A collaborator cannot add another user as a collaborator, although rest of its rights are at par with the admin.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">i.e. Only an Admin can add a collaborator</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">2) In an organisation any owner or admin can add another owner, unlike a collaborator.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">I feel besides forking, these are two unique combination of features that git offers its user, which helps admin to restrict level of access to different users.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Following&nbsp;are some of the </span><span style="font-size: medium;">features in branching a repository , which I feel may be a bit tricky for a first timer:</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">1) Both admin and collaborator can create a branch in a repository</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">2) When you clone a repository, only the master directory gets cloned.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">i.e. After you clone a repository, if you run the following&nbsp;command :</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$git branch - You will get only the master branch directory, irrespective of&nbsp;the number of branches that the&nbsp;repository has at the GitHub server.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">3) If you want to switch to any other branch of a cloned repository, then you need <span style="mso-spacerun: yes;">&nbsp;&nbsp;</span>to execute command: git checkout -b branchname origin/branch name</span><br />
+<br />
+<span style="font-size: medium;">4) When you create a branch in a repository: If the master branch had some files.Then those files are also copied into the newly created child branch.&nbsp;</span><br />
+<span style="font-size: medium;">But after the creation of the branch, if further files are added to the master branch&nbsp;(that is like a parent here)</span>&nbsp;,Then those files DO NOT get added in the branches of the repository.</div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">As a good practice always remember to do a $ <strong>git pull</strong> and ensure that your code is updated before git push.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Two confusing commands I frequently came across was Git pull and Git Fetch.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Difference between Git pull and Git Fetch :</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- On doing git pull, if you have conflicts between the files in the local repository and server repository you get merge options and it auto-merges as much as possible.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">- In case of fetch, auto merging does not happen. </span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">On doing a Git Status, one often gets a message like : </span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<code>$ git status<br /># On branch master<br /># Your branch is ahead of 'origin/master' <strong>by 1 commit</strong>.<br />#<br /># Changed but not updated:<br />#&nbsp;&nbsp; (use "git add &lt;file&gt;..." to update what will be committed)<br />#&nbsp;&nbsp; (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)<br />#<br /># modified:&nbsp;&nbsp; lib/simplegit.rb</code></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">-This means that you local machine stage&nbsp;has&nbsp;1 more commits (or&nbsp;1 version code ahead) of the GitHub server repository. You need to check and then push your commits to come be in sync.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<br />
+<span style="font-size: medium;">Many times when&nbsp;I tried pushing code&nbsp;I found&nbsp;<strong>Fatal 403 error</strong>. This&nbsp;I figured out was&nbsp;because </span><span style="font-size: medium;">Hyper Text Transfer Protocol Secure (HTTPS) is a secure version of the Hyper Text Transfer Protocol (http). </span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">To add origin&nbsp;I was using the following:</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote add origin <a href="https://github.com/username.git">https://github.com/username.git</a> -which gave me the error</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">So I would suggest, as a best practice, to use the following:</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote add origin git@github.com:username/Hello-World.git</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<br />
+<span style="font-size: medium;">In case we have already added using secure url then we can remove origin and re-initialize it: </span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote rm origin (Removes current origin&nbsp;)</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote -v (This lists all the remote origin)</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote add origin </span><a href="mailto:git@github.com:username/Hello-World.git"><span style="color: blue; font-size: medium;">git@github.com:username/Hello-World.git</span></a></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">I also noticed that when I initialised using :&nbsp;</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">$ git remote add origin </span><a href="mailto:git@github.com:username/Hello-World.git"><span style="color: blue; font-size: medium;">git@github.com:username/Hello-World.git</span></a>&nbsp;instead of $ git remote add origin <a href="https://github.com/username.git">https://github.com/username.git</a>&nbsp;, I was not asked for my credentials while pushing data from local working machine to GitHub repository.</div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">This is because this acts as url mapped with the SSH key and thus is synced with our account and hence does not need our credential again.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<span style="font-size: medium;">Even while trying to clone a repository, the thumb rule of using the SSH key generated Url holds good.</span></div>
+<div class="MsoNormal" style="margin: 0in 0in 9pt;">
+<br /></div>
+</div>
