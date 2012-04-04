@@ -279,7 +279,7 @@ a:hover {
   position:absolute;
   left:0;
   top:0;
-  z-index:9000;
+  z-index:-1;
   background-color:#000;
   display:none;
 }
@@ -291,7 +291,7 @@ a:hover {
   width:440px;
   height:200px;
   display:none;
-  z-index:9999;
+  z-index:0;
   padding:20px;
 }
 
@@ -300,4 +300,5 @@ a:hover {
   height:203px;
   padding:10px;
   background-color:#ffffff;
+  z-index:1
 }
