@@ -12,7 +12,16 @@
   <script type='text/javascript' src='js/example.js'></script>
   
   <script type="text/javascript">
+	
+	jQuery(document).ready(function(){
+	$('.disqus_thread .head').click(function() {
+		$(this).next().toggle();
+		return false;
+	}).next().hide();
+    });
+	  
   </script>
+  
   
 </head>
 <body>
@@ -131,8 +140,12 @@
 <br /></div>
 </div>
 
-</section>
-<!-- end of #content Home Page -->
+ <br/>
+ <div id="disqus_thread">
+    <h3><a href="#">Click here to post COMMENTS</a></h3>
+    <div>First content</div>
+ </div>
+ 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -147,8 +160,9 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-		 
+ 
+</section>
+<!-- end of #content Home Page -->
 
 
 <!-- #wrapper -->

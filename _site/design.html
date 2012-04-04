@@ -12,7 +12,16 @@
   <script type='text/javascript' src='js/example.js'></script>
   
   <script type="text/javascript">
+	
+	jQuery(document).ready(function(){
+	$('.disqus_thread .head').click(function() {
+		$(this).next().toggle();
+		return false;
+	}).next().hide();
+    });
+	  
   </script>
+  
   
 </head>
 <body>
@@ -117,8 +126,12 @@ Remember Irrespective of your direction of effort.... Your Ultimate Goal is a HA
 <a href="http://2.bp.blogspot.com/-63E_INnn-lg/T04yBzV1W7I/AAAAAAAAAD0/Xy2i3WgBG5Q/s1600/happy_customer.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="150" src="http://2.bp.blogspot.com/-63E_INnn-lg/T04yBzV1W7I/AAAAAAAAAD0/Xy2i3WgBG5Q/s400/happy_customer.jpg" width="400" /></a></div>
 &nbsp; &nbsp; &nbsp; </div>
 
-</section>
-<!-- end of #content Home Page -->
+ <br/>
+ <div id="disqus_thread">
+    <h3><a href="#">Click here to post COMMENTS</a></h3>
+    <div>First content</div>
+ </div>
+ 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -133,8 +146,9 @@ Remember Irrespective of your direction of effort.... Your Ultimate Goal is a HA
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-		 
+ 
+</section>
+<!-- end of #content Home Page -->
 
 
 <!-- #wrapper -->

@@ -12,7 +12,16 @@
   <script type='text/javascript' src='js/example.js'></script>
   
   <script type="text/javascript">
+	
+	jQuery(document).ready(function(){
+	$('.disqus_thread .head').click(function() {
+		$(this).next().toggle();
+		return false;
+	}).next().hide();
+    });
+	  
   </script>
+  
   
 </head>
 <body>
@@ -36,6 +45,10 @@
 <section id="main"><!-- #main content area -->
  {{content}}
  <br/>
+ <div id="disqus_thread">
+    <h3><a href="#">Click here to post COMMENTS</a></h3>
+    <div>First content</div>
+ </div>
  
 <div id="disqus_thread"></div>
 <script type="text/javascript">
