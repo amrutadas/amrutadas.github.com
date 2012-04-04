@@ -10,12 +10,13 @@ body {
 .aboutMe{
 background-image:url(../images/background.jpg);
 height: 100%;
-width: 100%;
+width: 920px;
 display: none;
 text-align: left;
 margin-left: 5px;
 margin-top: 5px;
 margin-right: 5px;
+padding:10px;
 clear: both;
 }
 
@@ -52,15 +53,67 @@ border-color:#FFFFFF;
 }
 
 .myPassion{
-background-image:url(../images/background.jpg);
+background-image:url(../images/backgroundPassion.png);
 height: 100%;
-width: 100%;
+width: 938px;
 display: none;
-text-align: left;
-margin-left: 5px;
-margin-top: 5px;
-margin-right: 5px;
+text-align: center;
+font: 14px Helvetica, Arial, sans-serif;
+font-style: italic;
+color:#000000;
 clear: both;
+}
+
+div .myPassion  img#moments2
+{
+position:absolute;
+width:200px;
+height:150px;
+border-style:solid;
+margin-right: 3px;
+border-width:3px;
+border-color:#7B3F00;
+right:170px;
+top:315px;
+}
+
+div .myPassion  img#moments3
+{
+position:absolute;
+width:260px;
+height:190px;
+border-style:solid;
+border-width:3px;
+border-color:#7B3F00;
+margin-right:3px;
+right:170px;
+top:540px;
+}
+
+div .myPassion  img#moments1
+{
+position:absolute;
+width:200px;
+height:150px;
+border-style:solid;
+border-width:3px;
+border-color:#7B3F00;
+margin-left: 3px;
+left:170px;
+top:315px;
+}
+
+div .myPassion  img#moments4
+{
+position:absolute;
+width:260px;
+height:190px;
+border-style:solid;
+border-width:3px;
+border-color:#7B3F00;
+margin-left: 3px;
+left:170px;
+top:540px;
 }
 
 .reachMe{
@@ -111,7 +164,7 @@ height:150px;
 border-style:solid;
 border-width:3px;
 border-color:#FFFFFF;
-margin-right:5px;
+margin:3px;
 right:168px;
 
 }
@@ -123,8 +176,8 @@ width:130px;
 height:150px;
 border-style:solid;
 border-width:3px;
-border-color:#FFFFFF;
-margin-left:5px;
+border-color:#BBBBBB;
+margin:5px;
 left:170px;
 
 }
