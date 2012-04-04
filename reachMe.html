@@ -1,10 +1,33 @@
 ---
 layout: default
 ---
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.js"></script>
 
-<script>
- 
-$(document).ready(function() {  
+<script type="text/javascript">
+$(document).ready(function() {  	
+
+	$(window).resize(function () {
+  
+        var box = $('#boxes .window');
+  
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+       
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+                
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+  
+        //Set the popup window to center
+        box.css('top',  winH/2 - box.height()/2);
+        box.css('left', winW/2 - box.width()/2);
+  
+});
+
  
     //select all the a tag with name equal to modal
     $('a[name=modal]').click(function(e) {
@@ -63,25 +86,42 @@ $(document).ready(function() {
 	             Mumbai <br/><br/>
     <b>Email</b>: amrutadas.88@gmail.com<br/>
     <b>Blogs</b>: http://amrutad.blogspot.in/<br/><br/><br/><br/></p>
+    
     <!-- #dialog is the id of a DIV defined in the code below -->
 <a href="#dialog" name="modal">Click here for feedback form </a>
  
-<div id="boxes">
+    <div id="boxes">
  
-     
-    <!-- #customize your modal window here -->
+     <!-- #customize your modal window here -->
  
     <div id="dialog" class="window">
-        <b>Testing of Modal Window</b> | 
-         
+        <b>Kindly Enter Your Feedback and Submit</b> 
         <!-- close button is defined as close class -->
         <a href="#" class="close">Close it</a>
+        
+       <form action="URL to form script" method="POST">
+
+         Your name: <br>
+        <input type="text" name="realname"><br>
+           <br>
+
+         Your email: <br>
+          <input type="text" name="email"><br>
+          <br>
+
+         Your comments: <br>
+      <textarea name="comments" rows="5" cols="50"></textarea><br><br>
+
+      <input type="button" value="Submit" onclick="window.alert ('Sorry! This is yet to be implemented.');"> 
+   </form> 
  
     </div>
- 
      
     <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
-    <div id="mask"></div>
+    <div id="mask" class="window"> </div> 
+    
 </div>
 
+
  </div>
+ 
