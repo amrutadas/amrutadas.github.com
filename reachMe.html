@@ -1,6 +1,58 @@
 ---
 layout: default
 ---
+
+<script>
+ 
+$(document).ready(function() {  
+ 
+    //select all the a tag with name equal to modal
+    $('a[name=modal]').click(function(e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        //Get the A tag
+        var id = $(this).attr('href');
+     
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+     
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+         
+        //transition effect     
+        $('#mask').fadeIn(1000);    
+        $('#mask').fadeTo("slow",0.8);  
+     
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+               
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+     
+        //transition effect
+        $(id).fadeIn(2000); 
+     
+    });
+     
+    //if close button is clicked
+    $('.window .close').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        $('#mask, .window').hide();
+    });     
+     
+    //if mask is clicked
+    $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+    });         
+     
+});
+ 
+</script>
 <div id="reachMe" class="reachMe">
      <img id="reach1" src="images/reach1.jpg"  />
 	  <img id="reach2" src="images/reach2.jpg"  />
@@ -11,4 +63,25 @@ layout: default
 	             Mumbai <br/><br/>
     <b>Email</b>: amrutadas.88@gmail.com<br/>
     <b>Blogs</b>: http://amrutad.blogspot.in/<br/><br/><br/><br/></p>
+    <!-- #dialog is the id of a DIV defined in the code below -->
+<a href="#dialog" name="modal">Click here for feedback form </a>
+ 
+<div id="boxes">
+ 
+     
+    <!-- #customize your modal window here -->
+ 
+    <div id="dialog" class="window">
+        <b>Testing of Modal Window</b> | 
+         
+        <!-- close button is defined as close class -->
+        <a href="#" class="close">Close it</a>
+ 
+    </div>
+ 
+     
+    <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
+    <div id="mask"></div>
+</div>
+
  </div>
